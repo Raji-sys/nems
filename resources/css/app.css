@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bod{
+    font-family:'Lato',sans-serif;
+    /* background-color: rgb(248, 248, 248); */
+
+    background:linear-gradient(-45deg,#a3e9b7fa, #1b352b,#a3e9b7fa);
+   }
+   input {
+    color: #5a5854;
+    padding: 3px;
+    background-color: white;
+    border: 1px solid #07423c;
+    border-radius: 4px;
+    @apply text-center
+ }
+ 
+ input:hover {
+    border-style: solid;
+    border-radius: 0.4rem;
+ 
+ }
+ 
+ input:focus {
+    border-radius: 0.8rem;
+    color: black;
+    font-weight: bold;
+    background:linear-gradient(-45deg,#b6bfb9fa, #dff3ec, #ccd2cffa);
+ }
+ .bBtn:hover{
+    border-radius: 1rem; 
+ }
+ .bBtn{
+    /* background:linear-gradient(-45deg,#88b595fa, #364640, #a4dbc1fa); */
+    background:linear-gradient(-45deg,#0b6925fa, #218c65, #0de37ffa);
+    border-style: solid;
+    color: white;
+    border-radius: 3px;
+    border-color: #07423c;
+    @apply p-4;
+ }
+ .bBtnlogout{
+    /* background:linear-gradient(-45deg,#88b595fa, #364640, #a4dbc1fa); */
+    background:linear-gradient(-45deg,#d30b0bfa, #90253c, #e30d5bfa);
+    border-style: solid;
+    color: white;
+    border-radius: 3px;
+    border-color: #420711;
+    @apply p-4;
+ }
