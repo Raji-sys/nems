@@ -3,7 +3,7 @@ import InputError from '@/Components/InputError.vue';
 import { useForm, Head } from '@inertiajs/inertia-vue3';
  
 const form = useForm({
-    // bio_id:'',
+    bio_id:'',
     department:'',
     unit:'',
     date_of_first_app:'',
@@ -20,10 +20,20 @@ const form = useForm({
 <Head title="Government Apppointment" />
     <div>
         <form @submit.prevent="form.post(route('gov.store'), { onSuccess: () => form.reset() })">
+
+            <select v-model="form.bio_id" >
+  <option value="1">bio 1</option>
+  <option value="2">bio 2</option>                      
+  <option value="3">bio 3</option>                      
+  <option value="100">bio 100</option>                      
+</select>
+<!-- <select name="bio_id" id="bio_id" v-model="form.bio_id">
+<option v-for="b in bio_id" :key="b.id" :value="b.id">{{ b.id }}</option>
+</select> -->
                     <h3 class="font-bold text-lg text-gray-800 text-center underline">government appointment</h3>
                 <!-- <div class="mb-1 pt-1 rounded ">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="department">bio_id</label>
-                    <input type="number" v-model="form.bio_id" id="department" class="bg-white rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-green-600 px-3 pb-3">
+                    <label class="block text-gray-700 text-sm font-bold mb-2 ml-3" for="bio">bio_id</label>
+                    <input type="number" v-model="form.bio_id" id="bio" class="bg-white rounded w-full text-gray-700 focus:outline-none border-b-4 border-gray-300 focus:border-green-600 px-3 pb-3">
                     <InputError :message="form.errors.message" class="mt-2" />                
                 </div> -->
                 <div class="mb-1 pt-1 rounded ">

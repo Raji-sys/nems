@@ -121,6 +121,8 @@ class BioController extends Controller
     {
         return Inertia::render('Bio/staffshow',[
             'bio' => $bio,
+
+            
         ]);
     }
 

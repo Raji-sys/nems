@@ -18,7 +18,7 @@ return new class extends Migration
             $table->id();
             $table->timestamps();
             // $table->foreignId('user_id')->constrained()->cascadeOnDelete();
-        
+            // $table->foreignIdFor(Bio::class);
             $table->foreignIdFor(Bio::class)->constrained()->cascadeOnDelete();
             $table->string('department');
             $table->string('unit');

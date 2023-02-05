@@ -3,7 +3,7 @@ import Bio from '@/Components/Bio.vue';
 import  PrimaryButton  from '@/Components/PrimaryButton.vue';
 import { useForm, Head, Link } from '@inertiajs/inertia-vue3';
  
-defineProps(['bio']);
+defineProps(['bio','govap']);
 </script>
  
 <template>

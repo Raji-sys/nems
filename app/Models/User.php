@@ -51,6 +51,6 @@ class User extends Authenticatable
     }
     public function bio()
     {
-        return $this->hasMany(Bio::class);
+        return $this->hasOne(Bio::class);
     }
 }

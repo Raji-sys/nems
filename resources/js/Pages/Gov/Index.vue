@@ -12,5 +12,4 @@ defineProps(['govap']);
                     :key="g.id"
                     :g="g"
                 />
-            <h1>Hellooo it's so sloww</h1>
 </template>

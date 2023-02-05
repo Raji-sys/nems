@@ -9,7 +9,7 @@ function currentTab(tabNumber) {
   return { tab, currentTab };
 }
 
-defineProps(['bio','govs']);
+defineProps(['bio','govap']);
   </script>
 <template>
   <section class="bod">
@@ -221,6 +221,7 @@ defineProps(['bio','govs']);
       <tbody class="text-sm rounded-lg max-sm:p-10 p-14 overflow-x-auto mx-0">
         <Index />
         <a :href="route('gov.index')">gov</a>
+      <!-- {{govap.bio.surname }}  -->
         <!-- <th scope="col" class="border-2 p-2 text-md text-green-800">department</th>
         <th scope="col" class="border-2 p-2 text-md text-green-800">unit</th>
         <th scope="row" class="border-2 p-2 text-md text-green-800">date of first appointment</th>

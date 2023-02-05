@@ -10,7 +10,6 @@ class Govap extends Model
     use HasFactory;
 
     protected $fillable = [
-        //show me the database
         'bio_id',
         'department',
         'unit',
@@ -22,10 +21,12 @@ class Govap extends Model
         'grade_level',
         'step',
     ];
-    public function bio(){
+    public function bio()
+    {
         return $this->belongsTo(Bio::class);
     }
-    // public function user(){
+    // public function user()
+    // {
     //     return $this->belongsTo(User::class);
     // }
 }

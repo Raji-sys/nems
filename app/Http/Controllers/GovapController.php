@@ -19,7 +19,8 @@ class GovapController extends Controller
     {
         // show me this page on the brozer..
         return Inertia::render('Gov/Index', [
-            'govap' => Govap::with('user:id,name')->latest()->get(),
+
+            'govap' => Govap::with('bio')->latest()->get(),
         ]);
     }
 
@@ -39,9 +40,10 @@ class GovapController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request) {
+    public function store(Request $request)
+    {
         $validated = $request->validate([
-            'bio_id' => ['bio_id'],
+            'bio_id' => [''],
             'department' => ['required'],
             'unit' => ['required'],
             'type_of_appointment' => ['required'],
@@ -52,9 +54,9 @@ class GovapController extends Controller
             'grade_level' => ['required'],
             'step' => ['required']
         ]);
-        // test the form sho
-        Govap::create($validated,[
-            'bio_id' => 1,
+//test?
+        Govap::create($validated, [
+            'bio_id' => $request->bio_id,
             'department' => $request->department,
             'unit' => $request->unit,
             'type_of_appointment' => $request->type_of_appointment,
@@ -69,10 +71,10 @@ class GovapController extends Controller
         // $govap = $bio->govaps()->create($validated);
 
         //the redirect route doesn't exist show me the route u wan test
-    
+
         return Redirect::route('gov.index');
     }
-    
+
     /**
      * Display the specified resource.
      *
@@ -81,7 +83,7 @@ class GovapController extends Controller
      */
     public function show(Govap $govap)
     {
-        return Inertia::render('Bio/staffshow',[
+        return Inertia::render('Bio/staffshow', [
             'gov' => $govap,
         ]);
     }
