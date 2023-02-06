@@ -10,7 +10,6 @@ class Govap extends Model
     use HasFactory;
 
     protected $fillable = [
-        'bio_id',
         'department',
         'unit',
         'date_of_first_app',

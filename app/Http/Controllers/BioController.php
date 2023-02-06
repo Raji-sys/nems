@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Bio;
-use App\Models\gov;
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 

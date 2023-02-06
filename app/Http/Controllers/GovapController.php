@@ -43,7 +43,7 @@ class GovapController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'bio_id' => [''],
+  
             'department' => ['required'],
             'unit' => ['required'],
             'type_of_appointment' => ['required'],
@@ -56,7 +56,6 @@ class GovapController extends Controller
         ]);
 //test?
         Govap::create($validated, [
-            'bio_id' => $request->bio_id,
             'department' => $request->department,
             'unit' => $request->unit,
             'type_of_appointment' => $request->type_of_appointment,

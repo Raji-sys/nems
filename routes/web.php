@@ -44,8 +44,6 @@ Route::resource('bio', BioController::class)
 ->only(['index', 'store','update', 'destroy'])
 ->middleware(['auth', 'verified']);
 
-//this is it so u have to add the name() like this is resource
-//so we can't redirect to resource? its posible because /gov for post existe 
 Route::resource('gov', GovapController::class)
     ->only(['index', 'store', 'update', 'destroy'])
     ->middleware(['auth', 'verified']);

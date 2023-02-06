@@ -3,7 +3,6 @@ import InputError from '@/Components/InputError.vue';
 import { useForm, Head } from '@inertiajs/inertia-vue3';
  
 const form = useForm({
-    bio_id:'',
     department:'',
     unit:'',
     date_of_first_app:'',
@@ -20,13 +19,13 @@ const form = useForm({
 <Head title="Government Apppointment" />
     <div>
         <form @submit.prevent="form.post(route('gov.store'), { onSuccess: () => form.reset() })">
-
+<!-- 
             <select v-model="form.bio_id" >
   <option value="1">bio 1</option>
   <option value="2">bio 2</option>                      
   <option value="3">bio 3</option>                      
   <option value="100">bio 100</option>                      
-</select>
+</select> -->
 <!-- <select name="bio_id" id="bio_id" v-model="form.bio_id">
 <option v-for="b in bio_id" :key="b.id" :value="b.id">{{ b.id }}</option>
 </select> -->
