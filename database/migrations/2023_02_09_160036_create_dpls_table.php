@@ -13,19 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('disciplinaries', function (Blueprint $table) {
+        Schema::create('dpls', function (Blueprint $table) {
             $table->id();
-            $table->integer('staff_id');
+            // $table->foreignId('bio_id')->nullable()->casadeOnDelete();
+            // $table->foreignId('bio_id')->nullable()->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('offense');
-            $table->string('decision');
-            $table->date('date');
+            $table->longText('decision');
+            $table->date('date_of_offense');
             $table->longText('comment');
-            $table->string('transfer_by');
-            $table->date('transfer_date');
-            $table->timestamps();
-            $table->foreignId('user_id')->constrained();
-
-        });
+    });
     }
 
     /**
@@ -35,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('disciplinaries');
+        Schema::dropIfExists('dpls');
     }
 };

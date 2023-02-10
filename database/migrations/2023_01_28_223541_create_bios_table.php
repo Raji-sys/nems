@@ -40,9 +40,7 @@ return new class extends Migration
             $table->integer('number_of_children');
             $table->string('name_of_children');
             $table->date('dob_of_children');
-            $table->string('transferred_from');
-            $table->date('transfer_date');
-
+  
             $table->string('next_of_kin_name1');
             $table->string('next_of_kin_phone1');
             $table->string('next_of_kin_email1');

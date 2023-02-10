@@ -19,13 +19,15 @@ class Govap extends Model
         'salary_scale',
         'grade_level',
         'step',
+        'current_post',
+        'promoted_date',
+        'increment_date',
+        'exec_confirmation_date',
+        'exec_appointment_date',
+        'exec_status_current_out_of_office'
     ];
     public function bio()
     {
-        return $this->belongsTo(Bio::class);
+        return $this->belongsToMany(Bio::class,'bio_govap','bio_id','govap_id');
     }
-    // public function user()
-    // {
-    //     return $this->belongsTo(User::class);
-    // }
 }

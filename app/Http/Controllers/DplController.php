@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Exec_Appointment;
+use App\Models\dpl;
 use Illuminate\Http\Request;
 
-class ExecAppointmentController extends Controller
+class DplController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -41,10 +41,10 @@ class ExecAppointmentController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Exec_Appointment  $exec_Appointment
+     * @param  \App\Models\dpl  $dpl
      * @return \Illuminate\Http\Response
      */
-    public function show(Exec_Appointment $exec_Appointment)
+    public function show(dpl $dpl)
     {
         //
     }
@@ -52,10 +52,10 @@ class ExecAppointmentController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Exec_Appointment  $exec_Appointment
+     * @param  \App\Models\dpl  $dpl
      * @return \Illuminate\Http\Response
      */
-    public function edit(Exec_Appointment $exec_Appointment)
+    public function edit(dpl $dpl)
     {
         //
     }
@@ -64,10 +64,10 @@ class ExecAppointmentController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Exec_Appointment  $exec_Appointment
+     * @param  \App\Models\dpl  $dpl
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Exec_Appointment $exec_Appointment)
+    public function update(Request $request, dpl $dpl)
     {
         //
     }
@@ -75,10 +75,10 @@ class ExecAppointmentController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Exec_Appointment  $exec_Appointment
+     * @param  \App\Models\dpl  $dpl
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Exec_Appointment $exec_Appointment)
+    public function destroy(dpl $dpl)
     {
         //
     }

@@ -15,19 +15,16 @@ return new class extends Migration
     {
         Schema::create('leaves', function (Blueprint $table) {
             $table->id();
-            $table->integer('staff_id');
+            // $table->foreignId('bio_id')->nullable()->casadeOnDelete();
+            // $table->foreignId('bio_id')->nullable()->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->string('nature_of_leave');
-            $table->string('year');
+            $table->integer('year');
             $table->date('start_date');
             $table->date('end_date');
             $table->integer('number_of_days_granted');
-            $table->string('status');
+            $table->string('approval_status');
             $table->longText('comments');
-            $table->string('transfer_by');
-            $table->date('transfer_date');
             $table->timestamps();
-            $table->foreignId('user_id')->constrained();
-
         });
     }
 

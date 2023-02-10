@@ -27,7 +27,7 @@ const submit = () => {
         <GuestLayout>
             <Head title="Register" />
         <section class="text-center border-b-2 p-1 border-green-600">
-            <h3 class="font-bold text-lg  text-green-700 ">NOHD EMPLOYEE MANAGEMENT SYSTEM</h3>
+            <!-- <h3 class="font-bold text-lg  text-green-700 ">ENLIGHTEN</h3> -->
             <p class="text-gray-800 pt-2 mb-2">create your account</p>
 
         </section>

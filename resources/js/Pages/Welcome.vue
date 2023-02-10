@@ -25,7 +25,7 @@ defineProps({
                 >Dashboard</Link>
 
             <div v-else class="text-center">
-                <h1 class="mb-4 max-w-2xl text-4xl font-bold text-green-700 leading-none md:text-5xl xl:text-6xl dark:text-white">NOHD</h1>
+                <h1 class="mb-4 max-w-2xl text-4xl font-bold text-green-700 leading-none md:text-5xl xl:text-6xl dark:text-white">ENLIGHTEN</h1>
                 <p class="mb-6 max-w-2xl font-medium text-gray-800 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400 border-b-2 border-green-600 p-2">employee management system</p>
                 
                 <Link :href="route('login')" 

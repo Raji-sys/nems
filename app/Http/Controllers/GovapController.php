@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Govap;
-use App\Models\Bio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Inertia\Inertia;
@@ -17,10 +16,9 @@ class GovapController extends Controller
      */
     public function index()
     {
-        // show me this page on the brozer..
         return Inertia::render('Gov/Index', [
-
-            'govap' => Govap::with('bio')->latest()->get(),
+            'govaps' => Govap::with('bio')->latest()->get(),
+            // 'govap' => Govap::latest()->get(),
         ]);
     }
 
@@ -43,7 +41,7 @@ class GovapController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-  
+
             'department' => ['required'],
             'unit' => ['required'],
             'type_of_appointment' => ['required'],
@@ -52,9 +50,15 @@ class GovapController extends Controller
             'salary_per_annum_at_date_of_first_app' => ['required'],
             'salary_scale' => ['required'],
             'grade_level' => ['required'],
-            'step' => ['required']
+            'step' => ['required'],
+            'current_post' => ['required'],
+            'promoted_date' => ['required'],
+            'increment_date' => ['required'],
+            'exec_confirmation_date' => ['required'],
+            'exec_appointment_date' => ['required'],
+            'exec_status_current_out_of_office' => ['required']
         ]);
-//test?
+
         Govap::create($validated, [
             'department' => $request->department,
             'unit' => $request->unit,
@@ -66,11 +70,6 @@ class GovapController extends Controller
             'grade_level' => $request->grade_level,
             'step' => $request->step
         ]);
-        // $bio = Bio::find($request->bio_id);
-        // $govap = $bio->govaps()->create($validated);
-
-        //the redirect route doesn't exist show me the route u wan test
-
         return Redirect::route('gov.index');
     }
 

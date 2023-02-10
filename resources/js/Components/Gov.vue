@@ -11,9 +11,9 @@ const editing = ref(false);
 <template>
   <div>
    <h1 class="text-green-700 text-2xl text-center p-3">
-      {{g.bio.surname }} 
-      {{g.bio.staff_id }} 
-      {{g.bio.id }} 
+      <!-- {{bio.surname }}  -->
+      <!-- {{g.bio.staff_id }} 
+      {{g.bio.id }}  -->
     </h1>
       <table class="shadow-2xl table-auto mt-0 max-sm:flex flex P-2">
       <tbody class=" text-sm rounded-lg max-sm:p-10 p-14 overflow-x-auto mx-0">

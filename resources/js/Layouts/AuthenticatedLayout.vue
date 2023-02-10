@@ -13,17 +13,17 @@ const showingNavigationDropdown = ref(false);
 <template>
     <div>
         <div class="min-h-screen ">
-            <nav class="text-gray-700 hover:text-gray-700 bg-white shadow-lg">
+            <nav class="text-gray-700 hover:text-gray-700 bod shadow-2xl p-2  ">
                 <!-- Primary Navigation Menu -->
                 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div class="flex justify-between h-16">
-                        <div class="w-full flex flex-wrap items-center justify-between px-6">
+    <div class="w-full flex flex-wrap items-center justify-between px-6">
     <div class="">
-        <NavLink :href="route('dashboard')" method="get" as="button" class="text-xl text-gray-800">dashboard</NavLink>
+        <NavLink :href="route('dashboard')" method="get" as="button" class="text-xl text-gray-100">dashboard</NavLink>
     </div>
     <div class="hidden sm:flex">
-        <span class=" text-sm text-green-800 ">welcome, {{ $page.props.auth.user.name }}
-        <NavLink :href="route('profile.edit')" method="get" as="button" class="text-xl text-green-800">profile</NavLink></span>
+        <span class=" text-sm text-gray-100 ">welcome, {{ $page.props.auth.user.name }}
+        <NavLink :href="route('profile.edit')" method="get" as="button" class="text-xl text-gray-100">profile</NavLink></span>
     </div>
     <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
             <NavLink :href="route('logout')" method="post" as="button" class="px-8 py-2 bg-green-600 hover:text-white hover:bg-red-600 text-white focus:text-white rounded shadow-2xl text-center">sign out</NavLink>

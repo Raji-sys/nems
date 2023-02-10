@@ -31,7 +31,7 @@ const submit = () => {
     <GuestLayout>
         <Head title="Log in" />
         <section class=" text-center border-b-2 border-green-600 p-2">
-            <h3 class="font-bold text-lg text-green-700">NOHD EMPLOYEE MANAGEMENT SYSTEM</h3>
+            <!-- <h3 class="font-bold text-lg text-green-700">ENLIGHTEN</h3> -->
             <p class="text-gray-800 pt-4 mb-2">sign in to your account</p>
         </section>
         <div v-if="status" class="mb-4 font-medium text-sm text-green-600">

@@ -4,13 +4,13 @@ import { Head, Link } from '@inertiajs/inertia-vue3';
 </script>
 
 <template>
-  <section class="">
+  <section class="bod">
 
     <Head title="Dashboard" />
     
     <AuthenticatedLayout>
     <div class=" min-h-screen md:pt-0 md:px-0">  
-  <div class="grid md:grid-cols-3 gap-4 content-center p-12 border-b-2 text-center ">
+  <div class="grid md:grid-cols-3 gap-4 content-center p-10 border-b-2 text-center bg-white">
      
     <Link :href="route('departments')" class="text-xl text-gray-800" >
     <div class=" bg-gradient-to-r from-lime-100 to to-lime-300 p-8 shadow-lg text-lg rounded-md ">
@@ -45,7 +45,7 @@ import { Head, Link } from '@inertiajs/inertia-vue3';
 
 
   </div>
-  <div class="grid md:grid-cols-2 gap-10 p-10 text-center bod mb-0">
+  <div class="grid md:grid-cols-2 gap-10 p-10 text-center mb-0">
     <!-- <div class="p-28 bg-gradient-to-l from-purple-300  to-blue-700 via-rose-400  shadow-lg rounded-xl text-xl text-gray-700">report</div>
     <div class="p-28 bg-gradient-to-l from-purple-300  to-blue-700 via-rose-400  shadow-lg rounded-xl text-xl text-gray-700">statistics</div> -->
     <div class="p-28 shadow-2xl rounded-xl text-xl text-gray-700 bg-slate-50">report</div>

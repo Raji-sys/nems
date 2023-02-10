@@ -30,8 +30,6 @@ class Bio extends Model
         'name_of_children',
         'number_of_children',
         'dob_of_children',
-        'transferred_from',
-        'transfer_date',
         'title',
         'staff_id',
         'gender',
@@ -80,6 +78,18 @@ class Bio extends Model
     }
     public function govaps()
     {
-        return $this->hasMany(Govap::class);
+        return $this->belongsToMany(Govap::class,'bio_govap','bio_id','govap_id');
+    }
+    public function rits()
+    {
+        return $this->belongsToMany(Rit::class);
+    }
+    public function leaves()
+    {
+        return $this->belongsToMany(Leave::class);
+    }
+    public function dpls()
+    {
+        return $this->belongsToMany(Dpl::class);
     }
 }
