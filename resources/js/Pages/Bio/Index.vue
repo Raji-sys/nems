@@ -46,7 +46,7 @@ defineProps(['bio']);
        <td class="border-2 p-4 text-center">{{bio.surname}} {{ bio.first_name }} {{ bio.middle_name }}</td>
        <td scope="row" class="border-2">{{bio.staff_id}}</td>
       <td class="border-2 p-4 text-center">coming soon</td>
-      <td class="border-2 p-4 text-center">dep</td>
+      <td class="border-2 p-4 text-center"></td>
       <td class="border-2 p-4 text-center">comming soon</td>
       <td class="border-2 p-4 text-center">coming soon</td>
       <td class="border-2 p-4 text-center">coming soon</td>
